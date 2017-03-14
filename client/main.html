@@ -1,0 +1,317 @@
+<head>
+    <title>viber</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+</head>
+
+<body>
+  {{> viber}}
+</body>
+
+<template name="viber">
+    <div class="admin-container">
+        <div class="admin-header">
+            <nav class="admin-menu">
+                <ul>
+                    <li><a href="#">Viber</a>
+                        <ul class="submenu">
+                            <li><a href="#">sublink1 down float not</a></li>
+                            <li><a href="#">sublink2</a></li>
+                            <li><a href="#">sublink3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">View</a>
+                        <ul class="submenu">
+                            <li><a href="#">sublink1</a></li>
+                            <li><a href="#">sublink2</a></li>
+                            <li><a href="#">sublink3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Conversation</a></li>
+                    <li><a href="#">Call</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+                <ul class="settings-menu">
+                    <li>
+                        <a href="#">
+                            <svg fill="#8f8d92" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
+                            </svg>
+                            <ul class="submenu">
+                                <li><a href="#">sublink1</a></li>
+                                <li><a href="#">sublink2</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="login">
+                <div class="avatar"></div>
+                <span class="avatar-name">Настя</span>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </div>
+        <div class="login-popup">
+            <div class="login-popup-wrapper">
+                <a href="#" class="close">
+                    <svg fill="#f7f7f7" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                </a>
+                <div class="title">Личный кабинет</div>
+                <form class="login-form"  method="post">
+                    <input class="login-field" type="text" name="login" placeholder="Логин">
+                    <input class="password-field" type="password" name="pasword" placeholder="Пароль">
+
+                    <label><input type="checkbox" name="remember"> Запомнить пароль  <a href="#">Я забыл пароль</a></label>
+                    <input class="btn" type="submit" value="Войти">
+                </form>
+            </div>
+        </div>
+
+        <div class="account-container">
+            <div class="account-menu">
+                <ul class="account-nav">
+                    <li>
+                        <a href="#">
+                            <svg width="24" height="24" fill="none" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                                <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z" stroke="#222" stroke-width="0.5"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <g fill="#666">
+                                    <rect x="6" y="6" width="12" height="2" stroke="#fff" stroke-width="1"/>
+                                    <rect x="6" y="9" width="12" height="2" stroke="#fff" stroke-width="1"/>
+                                    <rect x="6" y="12" width="8" height="2" stroke="#fff" stroke-width="1"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z" stroke="#222" stroke-width="0.5"/>
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" stroke="#222" stroke-width="0.5"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg fill="none" height="35" viewBox="0 0 24 24" width="35" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M12 19c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM6 1c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12-8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-6 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0-6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" stroke="#222" stroke-width="0.5"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+
+                <form class="search">
+                    <svg fill="#8f8d92" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                    <input type="search" placeholder="Search">
+                    <a href="#" class="compose">
+                        <svg fill="#8f8d92" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                        </svg>
+                    </a>
+                </form>
+
+                <div class="condition-list">
+                    <div class="chat active">
+                        <a href="#">Favorites</a>
+                        <svg fill="#8f8d92" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
+                        </svg>
+                    </div>
+                    <div class="contacts">
+                        <form>
+                            <input name="vieber" type="radio" value="only" id="radio-only"> <label for="radio-only"> Viber Only </label>
+                            <input name="vieber" type="radio" value="all" id="radio-all" checked> <label for="radio-all"> All</label>
+                        </form>
+                    </div>
+                    <div class="add-contacts">
+                        <span>Select Contacts</span>
+                        <svg fill="#fff" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="search-list">
+
+                    <ul class="chat-list">
+                        <li class="chat n1 active">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <span class="name">Широков Евгений</span>
+                                <p class="text-msg">понятно онятно </p>
+                            </div>
+                            <span class="dialog-day">Wednesday</span>
+
+                        </li>
+                        <li class="chat n2">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <span class="name">Иванов Николай</span>
+                                <p class="text-msg">понятно z nen gtht;bdfk gj gjdjle dxthfiytuj</p>
+                            </div>
+                            <span class="dialog-day">12.03.2017</span>
+
+                        </li>
+
+                        <li class="chat n3">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <span class="name">Протокоп Аглафеновна</span>
+                                <p class="text-msg">понятно z nen gtht;bdfk gj gjdjle dxthfiytuj  hgjghjghj ghfghfghfg fgfgh gh rthrthrthhhhhhhh rtt tytry </p>
+                            </div>
+                            <span class="dialog-day">12.03.2017</span>
+                        </li>
+                    </ul>
+
+                    <ul class="contact-list">
+                        <li class="contact n1">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <span class="name">Широков Евгений</span>
+                                <p class="phone">+7 900 956 16 12</p>
+                            </div>
+                            <span class="viber-only">
+								<svg fill="#8074d6" height="14" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+    								<path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2c0-4.97-4.03-9-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/>
+								</svg>
+							</span>
+
+                        </li>
+                        <li class="contact n2">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <span class="name">Широков Евгений</span>
+                                <p class="phone">+7 900 956 16 12</p>
+                            </div>
+                            <span class="viber-only"></span>
+                        </li>
+
+                    </ul>
+
+                    <ul class="add-contact-list">
+                        <li class="add-contact n2">
+                            <div class="avatar"></div>
+                            <div class="info">
+                                <span class="name">Широков Евгений</span>
+                                <p class="phone">+7 900 956 16 12</p>
+                            </div>
+                            <form action="">
+                                <label for="add">
+                                    <input class="checkbox" name="contact-add" type="checkbox" value="contact-add" id="add">
+                                    <span class="checkbox-custom"></span>
+                                    <span class="label">
+    									<svg fill="#fff" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+    										<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+										</svg></span>
+                                </label>
+                            </form>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class="contact-active">
+                <div class="contact-info">
+                    <div class="avatar"></div>
+                    <div class="info">
+                        <span class="name">Широков Евгений</span>
+                        <span class="phone">+7 900 999 99 90</span>
+                    </div>
+                </div>
+                <div class="contact-dialog">
+                    <div class="dialog-msg">
+                        <div class="dialog-day">Wednesday</div>
+
+                        <div class="contact-wrapper">
+                            <div class="contact-avatar"></div>
+                            <div class="contact-msg">
+                                <p class="text-msg">Здравствуй едравствуйте ghhhj  ;kjkj'lkj'j'lkj' jfhgldknfgl'kdfgl'dk d;fk;dfjg'dfj mkjkhjhuh ygggg Здравствуй</p><span class="time-msg">15:30</span>
+                            </div>
+                        </div>
+
+                        <div class="admin-wrapper">
+                            <div class="admin-msg">
+                                <p class="text-msg">Здравствуйте ghhhj  ;kjkj'lkj'j'lkj' jfhgldknf;fk;dfjg'dfj mkjkhjhuh ygggg Здjkhjhuh ygggg</p><span class="time-msg">15:30</span>
+                            </div>
+                            <div class="admin-avatar"></div>
+                        </div>
+
+                        <div class="admin-wrapper">
+                            <div class="admin-msg">
+                                <p class="text-msg">Здравствуйте</p><span class="time-msg">15:30</span>
+                            </div>
+                            <div class="admin-avatar"></div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="msg-box-wrapper">
+                        <form class="msg-box">
+                            <button class="btn file" type="submit">
+                                <svg fill="#8f8d92" height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" stroke="#fff" stroke-width="0.9"/>
+                                </svg>
+                            </button>
+                            <button class="btn mail" type="submit">
+                                <svg version="1.1" fill="#8f8d92"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" height="18"  width="18" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+									<path d="M334.963,295.151l48.188-166.366h-27.648l-9.6,34.44c-3.985-11.179-10.163-20.702-18.475-28.399
+									c-12.962-11.981-30.703-18.048-52.753-18.048c-21.231,0-40.858,5.99-58.3,17.801c-17.067,11.503-31.812,26.47-43.802,44.442
+									c-11.87,17.826-21.137,37.726-27.511,59.136c-6.366,21.41-9.6,42.462-9.6,62.566c0,11.23,1.545,22.383,4.574,33.084
+									c3.098,11.008,8.081,20.881,14.848,29.329c6.784,8.474,15.454,15.437,25.771,20.702c10.402,5.342,22.946,8.047,37.299,8.047
+									c11.895,0,23.125-2.057,33.391-6.118c10.052-3.985,19.174-8.951,27.145-14.814c7.996-5.888,15.036-12.706,20.941-20.25
+									c1.118-1.425,2.202-2.859,3.26-4.284c1.519,12.706,6.502,22.707,14.916,29.926c12.066,10.3,27.546,15.539,46.037,15.539
+									c21.956,0,41.788-4.634,58.94-13.764c17.084-9.096,31.556-21.734,43.042-37.598c11.358-15.744,20.139-34.62,26.095-56.124
+									c5.939-21.385,8.951-44.621,8.951-69.111c0-30.558-5.931-59.383-17.613-85.7c-11.665-26.24-28.245-49.306-49.314-68.531
+									c-21.018-19.149-46.225-34.287-74.931-44.996C330.099,5.41,298.313,0,264.35,0c-35.507,0-68.958,6.69-99.447,19.874
+									c-30.49,13.184-57.481,31.479-80.213,54.417c-22.75,22.963-40.858,50.261-53.82,81.118
+									c-12.971,30.908-19.541,64.546-19.541,99.917s6.212,68.958,18.458,99.84c12.279,30.908,29.807,58.3,52.062,81.468
+									c22.306,23.236,49.519,41.813,80.853,55.168C194.086,505.207,229.295,512,267.328,512c41.31,0,79.77-8.747,114.33-26.018
+									c34.449-17.246,64.333-40.678,88.781-69.683l4.087-4.838l-19.712-17.067l-4.19,4.966c-21.12,25.02-47.966,45.918-79.77,62.165
+									c-31.65,16.145-66.475,24.311-103.526,24.311c-33.69,0-64.93-6.118-92.885-18.15c-27.998-12.058-52.335-28.749-72.311-49.604
+									c-20.028-20.881-35.746-45.542-46.72-73.344c-10.991-27.827-16.572-57.899-16.572-89.412c0-29.73,5.675-58.778,16.879-86.349
+									c11.204-27.571,26.948-52.284,46.771-73.421c19.831-21.103,43.742-38.127,71.066-50.611
+									c27.324-12.459,57.737-18.773,90.436-18.773c29.739,0,57.728,4.813,83.183,14.285c25.404,9.472,47.71,22.861,66.338,39.757
+									c18.603,16.922,33.348,37.12,43.853,59.981c10.462,22.886,15.77,48.154,15.77,75.102c0,19.405-2.185,38.426-6.494,56.576
+									c-4.258,17.894-10.94,34.065-19.866,48.102c-8.747,13.764-20.164,24.969-33.937,33.314c-13.619,8.243-30.242,12.433-49.408,12.433
+									c-10.112,0-18.739-2.509-25.609-7.441c-6.289-4.565-9.353-12.681-9.353-24.866c0-4.966,0.64-11.102,1.92-18.227
+									C331.678,307.959,333.214,301.218,334.963,295.151z M321.856,248.721c-4.753,18.347-11.87,36.497-21.146,53.99
+									c-9.199,17.297-20.77,32.435-34.381,44.996c-13.15,12.109-27.87,17.997-45.047,17.997c-20.326,0-34.705-5.837-43.955-17.843
+									c-9.532-12.373-14.362-27.989-14.362-46.464c0-16.691,2.62-34.662,7.782-53.367c5.137-18.645,12.646-36.045,22.298-51.738
+									c9.523-15.437,21.419-28.425,35.354-38.554c13.483-9.805,29.047-14.788,46.276-14.788c9.626,0,17.911,1.604,24.619,4.71
+									c6.716,3.183,12.083,7.398,16.384,12.86c4.378,5.589,7.706,12.16,9.916,19.55c2.27,7.62,3.405,15.667,3.405,23.859
+									C328.998,215.339,326.592,230.4,321.856,248.721z"/>
+								</svg>
+                            </button>
+                            <textarea class="msg" name="msg" id="" cols="50" rows="1"  placeholder="Введите текст сообщения"></textarea>
+                            <button class="btn send">
+                                <svg fill="#8f8d92" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</template>

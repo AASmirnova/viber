@@ -1,0 +1,716 @@
+/*ScrollBar*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bfadef;
+  border: 0px none #fff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124,77,255,0.71);
+}
+::-webkit-scrollbar-thumb:active {
+  background: #7c4dff;
+}
+::-webkit-scrollbar-track {
+  background: #e3e2e2;
+  border: 0px none #fff;
+  border-radius: 51px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #c7c7c7;
+}
+::-webkit-scrollbar-track:active {
+  background: #c7c7c7;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/*container-admin*/
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+}
+.admin-container {
+  width: 100%;
+  overflow: hidden;
+}
+.admin-container input:hover,
+.admin-container button:hover,
+.admin-container a:hover,
+.admin-container textarea:hover,
+.admin-container input :active,
+.admin-container button :active,
+.admin-container a :active,
+.admin-container textarea :active,
+.admin-container input :focus,
+.admin-container button :focus,
+.admin-container a :focus,
+.admin-container textarea :focus {
+  outline: none;
+}
+.admin-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #e1e1e1;
+  border-bottom: 1px solid #d1d1d1;
+}
+.admin-header nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.admin-header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.admin-header nav ul li {
+  text-align: center;
+  padding: 12px 15px;
+  display: flex;
+  position: relative;
+  background-color: #e1e1e1;
+}
+.admin-header nav ul li a {
+  text-decoration: none;
+  font-size: 0.857em;
+  color: #8f8d92;
+}
+.admin-header nav ul li:hover {
+  background-color: #d2d2d2;
+}
+.admin-header nav ul li:hover a {
+  color: #38363a;
+}
+.admin-header nav ul li:hover ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  border: 1px solid #ececec;
+  box-shadow: 3px 2px 4px 0px #c7c7c7;
+}
+.admin-header nav ul li:hover ul li {
+  background-color: #fff;
+  border-bottom: 1px solid #ececec;
+}
+.admin-header nav ul li:hover ul li:hover {
+  background-color: #f1f1f1;
+}
+.admin-header nav ul li:hover ul li a {
+  color: #38363a;
+  max-width: 200px;
+  white-space: pre;
+}
+.admin-header nav ul li ul {
+  display: none;
+  left: 0;
+}
+.admin-header nav ul.settings-menu {
+  width: 50px;
+  height: 40px;
+  align-self: flex-end;
+  position: absolute;
+  border-left: 1px solid #d1d1d1;
+}
+.admin-header nav ul.settings-menu li ul {
+  right: 0;
+  left: inherit;
+  box-shadow: -3px 2px 4px 0px #c7c7c7;
+}
+.login {
+  display: flex;
+  position: absolute;
+  right: 50px;
+  align-self: center;
+  font-size: 0.87em;
+}
+.login .avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 40%;
+  background: url("/images/avatar.jpg") center no-repeat;
+  background-size: cover;
+  margin-right: 5px;
+}
+.login .avatar-name {
+  display: flex;
+  margin: auto 0px;
+}
+.login .btn {
+  display: flex;
+  text-decoration: none;
+  margin: 0px 14px;
+}
+.btn {
+  color: #fff;
+  padding: 2px 12px;
+  border-radius: 10px;
+  background-color: #54bc00;
+}
+.btn:hover {
+  background-color: #439600;
+}
+/*login-popup*/
+.login-popup {
+  display: none;
+  background-color: rgba(34,34,34,0.76);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-popup .login-popup-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8074d6;
+  width: 400px;
+  height: 400px;
+}
+.login-popup .login-popup-wrapper .close {
+  align-self: flex-end;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+.login-popup .login-popup-wrapper .title {
+  background-color: #8074d6;
+  color: rgba(247,247,247,0.95);
+  font-size: 2em;
+  font-style: light;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.login-popup .login-popup-wrapper .login-form {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 10px;
+}
+.login-popup .login-popup-wrapper .login-form input {
+  padding-left: 5px;
+  width: 300px;
+  height: 34px;
+  margin: 10px 36px;
+  border: 1px solid #ececec;
+}
+.login-popup .login-popup-wrapper .login-form input[type="checkbox"] {
+  width: 20px;
+  margin-right: 4px;
+  align-self: flex-start;
+  background-color: #fff;
+  vertical-align: middle;
+}
+.login-popup .login-popup-wrapper .login-form input[type="checkbox"]:focus {
+  box-shadow: none;
+}
+.login-popup .login-popup-wrapper .login-form input:focus {
+  border: none;
+  outline: none;
+  box-shadow: -2px 2px 5px 0px rgba(134,128,128,0.96);
+}
+.login-popup .login-popup-wrapper .login-form label {
+  color: #8f8d92;
+  margin-top: 20px;
+}
+.login-popup .login-popup-wrapper .login-form label a {
+  padding-left: 45px;
+  color: #8f8d92;
+  text-decoration: none;
+}
+.login-popup .login-popup-wrapper .login-form label a:hover {
+  color: #7c11da;
+}
+.login-popup .login-popup-wrapper .login-form .btn {
+  width: 150px;
+  align-self: center;
+  margin-top: 10px;
+}
+/*account*/
+.account-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+/*contact-active chat-active*/
+}
+.account-container .account-menu {
+  max-width: 380px;
+  width: 380px;
+  height: 100%;
+  background-color: #fff;
+/*account searh search-list*/
+}
+.account-container .account-menu .account-nav {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+  border-bottom: 1px solid #d1d1d1;
+}
+.account-container .account-menu .account-nav li {
+  display: flex;
+  text-align: center;
+  padding: 18px 20px;
+}
+.account-container .account-menu .account-nav li:active {
+  background-color: #ececec;
+}
+.account-container .account-menu .account-nav li:active svg {
+  fill: #8074d6;
+}
+.account-container .account-menu .account-nav li:active svg path {
+  stroke: #ececec;
+}
+.account-container .account-menu .account-nav li:active svg g {
+  fill: #fff;
+}
+.account-container .account-menu .account-nav li:active svg g rect {
+  stroke: #8074d6;
+}
+.account-container .account-menu .account-nav li svg {
+  width: 35px;
+  height: 34px;
+}
+.account-container .account-menu .account-nav li svg:hover {
+  fill: #8074d6;
+}
+.account-container .account-menu .account-nav li svg:hover path {
+  stroke: #fff;
+}
+.account-container .account-menu .account-nav li svg:hover g {
+  fill: #fff;
+}
+.account-container .account-menu .account-nav li svg:hover g rect {
+  stroke: #8074d6;
+}
+.account-container .account-menu .search {
+  padding: 10px;
+  height: 32px;
+  border-bottom: 1px solid #d1d1d1;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+.account-container .account-menu .search svg {
+  position: relative;
+  left: 10px;
+  top: 8px;
+  z-index: 1;
+}
+.account-container .account-menu .search .compose {
+  padding-right: 10px;
+}
+.account-container .account-menu .search input {
+  background-color: #ececec;
+  border-radius: 10px;
+  width: 260px;
+  padding: 8px 5px 8px 30px;
+  border: 1px solid #d1d1d1;
+  position: absolute;
+  left: 10px;
+}
+.account-container .account-menu .search input:hover,
+.account-container .account-menu .search .compose:hover,
+.account-container .account-menu .search input :active,
+.account-container .account-menu .search .compose :active,
+.account-container .account-menu .search input :focus,
+.account-container .account-menu .search .compose :focus {
+  outline: none;
+  border-color: #8074d6;
+}
+.account-container .account-menu .condition-list {
+  border-bottom: 1px solid #d1d1d1;
+}
+.account-container .account-menu .chat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.account-container .account-menu .chat a {
+  color: #8f8d92;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.account-container .account-menu .chat a:hover,
+.account-container .account-menu .chat a :active {
+  color: #8074d6;
+}
+.account-container .account-menu .chat svg:hover {
+  color: #8074d6;
+}
+.account-container .account-menu .contacts form {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 39px;
+}
+.account-container .account-menu .contacts form input[type=radio] {
+  display: none;
+}
+.account-container .account-menu .contacts form label {
+  color: #969696;
+  padding: 10px;
+  flex-grow: 1;
+  width: 50%;
+  text-align: center;
+  border-left: 3px solid #fff;
+}
+.account-container .account-menu .contacts form label:hover {
+  background-color: #f1f1f1;
+}
+.account-container .account-menu .contacts form input[type=radio]:checked + label {
+  background-color: #d2d2d2;
+  color: #38363a;
+}
+.account-container .account-menu .add-contacts {
+  background-color: #8074d6;
+  color: #fff;
+  padding: 10px;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.account-container .account-menu .add-contacts:hover {
+  background-color: #7066bb;
+}
+.account-container .account-menu .search-list ul {
+  padding: 0;
+  margin: 2px 5px 2px 0px;
+  overflow-y: scroll;
+  height: calc(100vh - 216px);
+}
+.account-container .account-menu .search-list ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style-type: none;
+  border-bottom: 1px solid #ececec;
+  padding: 10px;
+}
+.account-container .account-menu .search-list ul li .avatar {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 35%;
+  margin-right: 12px;
+}
+.account-container .account-menu .search-list ul li .info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+.account-container .account-menu .search-list ul li .info .name {
+  font-size: 0.92em;
+}
+.account-container .account-menu .search-list ul li .info .text-msg,
+.account-container .account-menu .search-list ul li .info .phone {
+  padding: 2px 5px 2px 0px;
+  margin: 0;
+  font-size: 0.8em;
+  height: 30px;
+  width: 170px;
+  color: #8f8d92;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.account-container .account-menu .search-list ul li .info .phone {
+  height: 15px;
+}
+.account-container .account-menu .search-list ul li:hover {
+  background-color: #f7f7f7;
+}
+.account-container .account-menu .search-list ul li:active {
+  background-color: #dbeaef;
+}
+.account-container .account-menu .search-list ul .n1 .avatar {
+  background: url("/images/avatar1.jpg") center no-repeat;
+  background-size: cover;
+}
+.account-container .account-menu .search-list ul .n2 .avatar {
+  background: url("/images/avatar2.jpg") center no-repeat;
+  background-size: cover;
+}
+.account-container .account-menu .search-list ul .n3 .avatar {
+  background: url("/images/avatar3.jpg") center no-repeat;
+  background-size: cover;
+}
+.account-container .account-menu .search-list .chat-list {
+  display: block;
+}
+.account-container .account-menu .search-list .chat-list .chat .dialog-day {
+  flex-grow: 0.5;
+  font-size: 0.6em;
+  color: #8074d4;
+}
+.account-container .account-menu .search-list .contact-list {
+  display: none;
+}
+.account-container .account-menu .search-list .contact-list .contact .info {
+  align-self: center;
+}
+.account-container .account-menu .search-list .contact-list .contact .viber-only {
+  flex-grow: 0.5;
+  font-size: 0.6em;
+  color: #8074d4;
+}
+.account-container .account-menu .search-list .add-contact-list {
+  display: none;
+}
+.account-container .account-menu .search-list .add-contact-list .add-contact form {
+  height: 30px;
+  align-self: center;
+}
+.account-container .account-menu .search-list .add-contact-list .add-contact form .checkbox {
+  display: none;
+}
+.account-container .account-menu .search-list .add-contact-list .add-contact form .checkbox-custom {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+.account-container .account-menu .search-list .add-contact-list .add-contact form .label {
+  display: inline-block;
+  position: relative;
+  top: -24px;
+  left: 4px;
+}
+.account-container .account-menu .search-list .add-contact-list .add-contact form .checkbox:checked + .checkbox-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-color: #5dbfcc;
+  border: 2px solid #5dbfcc;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.account-container .account-menu .search-list .add-contact-list .add-contact .info {
+  align-self: center;
+}
+.account-container .contact-active {
+  width: 100%;
+  height: 100%;
+  background-color: #ebebeb;
+}
+.account-container .contact-active .contact-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  padding: 12px;
+  height: 50px;
+  border: 1px solid #d1d1d1;
+  border-top: none;
+  border-right: none;
+}
+.account-container .contact-active .contact-info .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 35%;
+  background: url("/images/avatar1.jpg") center no-repeat;
+  background-size: cover;
+  margin-right: 12px;
+}
+.account-container .contact-active .contact-info .info {
+  display: flex;
+  flex-direction: column;
+}
+.account-container .contact-active .contact-info .info .name {
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+.account-container .contact-active .contact-info .info .phone {
+  font-size: 0.9em;
+  color: #8f8d92;
+}
+.account-container .contact-active .contact-dialog {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  height: calc(100vh - 126px);
+}
+.account-container .contact-active .contact-dialog .dialog-msg {
+  background-color: #ebebeb;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  max-width: 900px;
+  width: 60%;
+  min-width: 500px;
+  height: calc(100vh - 202px);
+  padding: 0px 15% 10px 15%;
+  margin-bottom: 10px;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .dialog-day {
+  font-size: 0.9em;
+  color: #8f8d92;
+  padding: 5px;
+  border: 1px solid #8f8d92;
+  border-radius: 10px;
+  max-width: 80px;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 20px;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .contact-wrapper,
+.account-container .contact-active .contact-dialog .dialog-msg .admin-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .contact-wrapper {
+  justify-content: flex-start;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .admin-wrapper {
+  justify-content: flex-end;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .admin-avatar,
+.account-container .contact-active .contact-dialog .dialog-msg .contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 35%;
+  display: flex;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .admin-avatar {
+  background: url("/images/avatar.jpg") center no-repeat;
+  background-size: cover;
+  margin-left: 15px;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .contact-avatar {
+  background: url("/images/avatar1.jpg") center no-repeat;
+  background-size: cover;
+  margin-right: 15px;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .admin-msg,
+.account-container .contact-active .contact-dialog .dialog-msg .contact-msg {
+  max-width: 55%;
+  margin-bottom: 15px;
+  padding: 2px 10px;
+  position: relative;
+  border-radius: 3px;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .contact-msg {
+  background-color: #9f9cbf;
+  color: #fff;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+.account-container .contact-active .contact-dialog .dialog-msg .admin-msg {
+  background-color: #fff;
+  color: #2b2929;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+.account-container .contact-active .contact-dialog .dialog-msg .admin-msg:before,
+.account-container .contact-active .contact-dialog .dialog-msg .contact-msg:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: calc(50% - 4px);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .contact-msg:before {
+  right: 100%;
+  border-right: 8px solid #9f9cbf;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .admin-msg:before {
+  left: 100%;
+  border-left: 8px solid #fff;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .time-msg {
+  font-size: 0.8em;
+}
+.account-container .contact-active .contact-dialog .dialog-msg .text-msg {
+  font-size: 1em;
+  line-height: 1.6em;
+  margin: 5px 2px;
+  white-space: pre-wrap;
+}
+.account-container .contact-active .contact-dialog .msg-box-wrapper {
+  background-color: rgba(255,255,255,0.72);
+  height: 55px;
+  width: 100%;
+  border-top: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.account-container .contact-active .contact-dialog .msg-box-wrapper .msg-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fff;
+  width: 600px;
+  border-radius: 20px;
+  padding: 4px 15px;
+}
+.account-container .contact-active .contact-dialog .msg-box-wrapper .msg-box .msg {
+  height: 20px;
+  border: none;
+  width: 100%;
+}
+.account-container .contact-active .contact-dialog .msg-box-wrapper .msg-box .btn {
+  border: none;
+  background-color: #fff;
+  padding: 2px;
+}
+.account-container .contact-active .contact-dialog .msg-box-wrapper .msg-box .btn svg:hover {
+  fill: #8074d6;
+}
+.account-container .contact-active .contact-dialog .msg-box-wrapper .msg-box .mail svg {
+  margin-right: 15px;
+}
+.account-container .contact-active .contact-dialog .msg-box-wrapper .msg-box .send {
+  position: relative;
+  right: -70px;
+  width: 50px;
+  height: 40px;
+  border-radius: 50%;
+}
+.account-container .contact-active .contact-dialog .msg-box-wrapper .msg-box .send svg {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.account-container .active {
+  display: flex;
+}
